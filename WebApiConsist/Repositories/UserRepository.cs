@@ -13,9 +13,6 @@ namespace WebApiConsist.Repositories
         }
         public async Task<User?> CreateUserAsync(string name, string password)
         {
-            //_context.Users.Add(user);
-            //await _context.SaveChangesAsync();
-            //return user;
             var user = new User
             {
                 UserName = name,
@@ -49,10 +46,6 @@ namespace WebApiConsist.Repositories
             if (user == null)
                 return true;
             return false;
-        }
-        public async Task<List<User>> GetUsers()
-        {
-            return await _context.Users.ToListAsync();
         }
     }
 }
