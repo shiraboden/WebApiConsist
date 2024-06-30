@@ -25,7 +25,7 @@ namespace WebApiConsist.Controllers
         {
             _logger.LogInformation($"try to create a new user with the parameters:({newUser.UserName}, {newUser.UserPassword}))");
             var createdUser = await _userRepository.CreateUserAsync(newUser.UserName, newUser.UserPassword);
-            if (createdUser != null)
+            if (createdUser != null) 
             {
                 _logger.LogInformation($"created a new user:({createdUser.UserId}, {newUser.UserName}, {newUser.UserPassword})");
                 return Ok(createdUser);
